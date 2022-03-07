@@ -1,0 +1,15 @@
+{
+  "id": "credentialSubject.email",
+  "schema": {
+    "ISSUER_NAME": "issuer.name",
+    "ISSUER_URL": "issuer.url",
+    "ISSUER_IMAGE": "issuer.image",
+    "ISSUANCE_DATE": "issuer.date",
+    "LEARNER_NAME": "credentialSubject.name",
+    "LEARNER_GIVEN_NAME": "credentialSubject.hasCredential.givenName",
+    "LEARNER_EMAIL": "credentialSubject.email",
+    "LEARNER_FAMILY_NAME": "credentialSubject.hasCredential.familyName",
+    "LEARNER_BIRTH_DATE": "credentialSubject.hasCredential.birthDate",
+    "LEARNER_ADDRESS": "credentialSubject.hasCredential.streetAddress"
+  }
+}

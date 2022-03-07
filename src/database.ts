@@ -2,11 +2,11 @@
 // You may modify the methods for DatabaseClient in order to
 // suit your organization's DBMS deployment infrastructure
 
-const { MongoClient } = require('mongodb');
+const { MongoClient } = require("mongodb");
 const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 const DB_HOST = process.env.DB_HOST;
-const DB_URI = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}`;
+const DB_URI = `mongodb://${DB_HOST}`;
 
 class DatabaseClient {
   private client: any;
@@ -32,7 +32,7 @@ class DatabaseClient {
   async close() {
     await this.client.close();
   }
-  
+
   async connectServer(dbServerUri: string) {
     const connectionOpts = {
       useNewUrlParser: true,
@@ -51,4 +51,4 @@ class DatabaseClient {
   }
 }
 
-export const dbCredClient = new DatabaseClient(DB_URI, 'mitdcc', 'Credential');
+export const dbCredClient = new DatabaseClient(DB_URI, "mitdcc", "Credential");

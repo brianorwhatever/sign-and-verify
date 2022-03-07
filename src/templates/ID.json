@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1",
+    "https://w3id.org/dcc/v1"
+  ],
+  "type": ["VerifiableCredential"],
+  "issuer": {
+    "id": "{{ISSUER_DID}}",
+    "name": "{{ISSUER_NAME}}",
+    "url": "{{ISSUER_URL}}",
+    "image": "{{ISSUER_IMAGE}}"
+  },
+  "issuanceDate": "{{ISSUANCE_DATE}}",
+  "credentialSubject": {
+    "id": "{{LEARNER_DID}}",
+    "name": "{{LEARNER_NAME}}",
+    "hasCredential": {
+      "type": "Person",
+      "name": "{{CREDENTIAL_NAME}}",
+      "description": "{{CREDENTIAL_DESC}}",
+      "Person:givenName": "{{LEARNER_GIVEN_NAME}}",
+      "Person:familyName": "{{LEARNER_FAMILY_NAME}}",
+      "Person:birthDate": "{{LEARNER_BIRTH_DATE}}",
+      "Person:streetAddress": "{{LEARNER_ADDRESS}}"
+    }
+  }
+}
